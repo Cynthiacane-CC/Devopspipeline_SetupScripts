@@ -8,7 +8,7 @@
 
 # #Remove AWSCLI1
 # sudo rm -rf /usr/local/aws
-# sudo rm /usr/local/bin/aws
+# sudo rm -rf /usr/local/bin/aws
 
 # Step 1: create EC2 ubuntu instance: username is ubuntu and not ec2-user
 
@@ -16,7 +16,7 @@
  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 apt install unzip python
 unzip awscliv2.zip
-sudo ./awscliv2/install -i /usr/local/aws -b /usr/local/bin/aws
+sudo ./aws/install -i /usr/local/aws -b /usr/local/bin/aws
 
 #Step 3: Install kubectl on ubuntu instance
  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl

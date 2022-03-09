@@ -1,22 +1,8 @@
 # For script start by creating the IAM role (step 5) and the hosted DNS (step 7) using amazon console
-#  #install AWSCLI
-#  curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
-#  apt install unzip python
-#  unzip awscli-bundle.zip
-#  #sudo apt-get install unzip - if you dont have unzip in your system
-#  ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
-
-# #Remove AWSCLI1
-# sudo rm -rf /usr/local/aws
-# sudo rm -rf /usr/local/bin/aws
-
 # Step 1: create EC2 ubuntu instance: username is ubuntu and not ec2-user
 
 #Step 2: install awscli2
- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-apt install unzip python
-unzip awscliv2.zip
-sudo ./aws/install -i /usr/local/aws -b /usr/local/bin/aws
+apt install awscli -y
 
 #Step 3: Install kubectl on ubuntu instance
  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
